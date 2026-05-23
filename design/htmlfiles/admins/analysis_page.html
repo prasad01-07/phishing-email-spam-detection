@@ -1,0 +1,70 @@
+{% extends 'admins/admin_design.html' %}
+{% block adminblock %}
+{% load staticfiles %}
+    <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet">
+
+<style>
+.category{
+     position: absolute;
+    margin-top:50px;
+    left:px;
+    padding:5px;
+    height:350px;
+    width:1150px;
+    overflow:scroll;
+    float:left;
+         font-family: 'Russo One', sans-serif;
+
+    }
+    .category table{
+    width:70em;
+    text-align:center;
+        border-collapse:collapse;
+
+
+    border-spacing:1px;
+    background:;
+}
+
+
+.category table tr th{
+background:rgb(0, 204, 102);
+padding:5px;
+}
+.category table tr td{
+background:#ff0e00;
+padding:5px;
+}
+
+</style>
+
+<div class="category">
+<table>
+    <tr>
+        <th>SENDER MAIL</th>
+        <th>TO MAIL</th>
+        <th>SUBJECT</th>
+        <th>CHAT</th>
+        <th>CATEGORY</th>
+        <th>DELETE</th>
+    </tr>
+    {% for o in obj %}
+    <tr>
+        <td>{{o.sendermail}}</td>
+        <td>{{o.to}}</td>
+        <td>{{o.subject}}</td>
+        <td>{{o.chat}}</td>
+        <td>{{o.category}}</td>
+        <td ><a href="{% url 'analysisdelete' o.id %}" style="text-decoration:none;color:black">Delete</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+</div>
+
+<div class="sideimage"></div>
+
+
+
+{%endblock%}

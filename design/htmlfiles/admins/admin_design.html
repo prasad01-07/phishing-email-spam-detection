@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet">
+    <style>
+    body{
+    background: url("{% static 'bg3.png' %}");
+    background-size: cover;
+    }
+        .menu table{
+          width:100%;
+          text-align:center;
+          font-family: 'Russo One', sans-serif;
+
+
+          }
+          h1{
+          font-family: 'Russo One', sans-serif;
+
+          }
+          .menu table td:hover{
+          background:;
+
+          }
+          .menu table td{
+          background:rgb(243, 243, 243);
+
+         }
+          .menu table,.menu table th,.menu table td {
+    border: ;
+    border-collapse: collapse;
+
+}
+.menu table th,.menu table  td {
+    padding: 15px;
+
+    }
+
+
+          .topic h1{
+          color:black;
+          padding:2px;
+          text-align:center;
+          border-style:none;
+          height:100px;
+          width:1330px;
+          float:left;
+
+
+          }
+          .mainholder{
+
+          position:relative;
+          top:50px;
+          left:50px;
+          z-index:999;
+          float:left;
+          }
+
+
+    </style>
+</head>
+<body>
+<div class="background-image">
+    <div class="topic"><h1 style="color:#ff0e00;margin-top:10px;margin-left:30px;border-style:none;width:1300px;height:56px;border-color:black;background:;">Phishing Email Detection Using
+Improved RCNN Model with Multilevel
+Vectors and Attention Mechanism</h1></div>
+<div class="menu">
+        <table>
+            <tr>
+                 <td><a  style="color:black;text-decoration: none;" href="{% url 'admin_page' %}">USER DETAILS</a></td>
+                <td><a  style="color:black;text-decoration: none;" href="{% url 'analysis_page' %}"> ANALYSIS PAGE</a></td>
+                <td><a  style="color:black;text-decoration: none;" href="{% url 'categoryanalysis_chart' 'doughnut' %}"> CHART PAGE</a></td>
+                <td><a  style="color:black;text-decoration: none;" href="{% url 'attactdetails'  %}"> PHISHING ATTACK </a></td>
+
+                <td><a  style="color:black;text-decoration: none;" href="{% url 'viewfeedback' %}"> FEEDBACK</a></td>
+                <td><a  style="color:black;text-decoration: none;" href="{% url 'login_page' %}">LOGOUT</a></td>
+
+
+            </tr>
+        </table>
+    </div>
+</div>
+</div>
+<div class="marqee">
+
+</div>
+<div class="mainholder">
+{% block adminblock %}
+{% endblock %}
+</div>
+
+</body>
+</html>

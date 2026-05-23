@@ -1,0 +1,74 @@
+{% extends 'admins/admin_design.html' %}
+{% block adminblock %}
+{% load staticfiles %}
+    <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet">
+
+<style>
+
+     .viewfeedback{
+     position: absolute;
+    top:50px;
+    left:px;
+    padding:5px;
+    height:300px;
+    width:750px;
+         font-family: 'Russo One', sans-serif;
+    float:left;
+    overflow:scroll;
+    }
+    .viewfeedback table{
+    width:50em;
+    text-align:center;
+        border-collapse:collapse;
+
+
+    border-spacing:1px;
+    background:;
+}
+
+
+.viewfeedback table tr th{
+background:rgb(0, 204, 102);
+padding:5px;
+}
+.viewfeedback table tr td{
+background:#ff0e00;
+padding:5px;
+}
+.viewfeedback table tr:hover td{
+background:rgba();
+}
+.any{
+border-style:solid;
+ border-width:1px;
+ height:380px;
+ width:360px;
+ margin-top:50px;
+ margin-left:830px;
+ background: url("{% static 'feedback.jpg' %}");
+ background-size: 100%100%;
+float:left;
+}
+
+</style>
+
+<div class="viewfeedback">
+<table>
+    <tr>
+        <th>USER NAME</th>
+        <th>FEEDBACK</th>
+    </tr>
+
+ <tr>
+{% for o in object %}
+
+    <td style="color:">{{o.username.userid}}</td><br>
+    <td style="color:">{{o.feedback}}</td>
+
+
+ </tr>
+    {% endfor %}
+</table>
+</div>
+<div class="any"></div>
+{% endblock %}
